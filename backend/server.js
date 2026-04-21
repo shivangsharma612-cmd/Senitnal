@@ -7,6 +7,7 @@ require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
+// const connectDB = require('./config/db');
 const connectDB = require('./config/db');
 // const { initWebSocketServer } = require('./websocket/wsServer.js');
 const { initWebSocketServer } = require('./websocket/wsServer.js');
@@ -18,7 +19,7 @@ const symptomsRoutes = require('./routes/symptoms');
 
 const app = express();
 
-// ── Connect MongoDB ──
+// connectDB();
 connectDB();
 
 // ── Middleware ──
