@@ -7,8 +7,6 @@ require('dotenv').config();
 const http = require('http');
 const express = require('express');
 const cors = require('cors');
-// const connectDB = require('./config/db');
-const connectDB = require('./config/db');
 // ── Route imports ──
 const authRoutes     = require('./routes/auth');
 const vitalsRoutes   = require('./routes/vitals');
@@ -16,9 +14,6 @@ const alertsRoutes   = require('./routes/alerts');
 const symptomsRoutes = require('./routes/symptoms');
 
 const app = express();
-
-// connectDB();
-connectDB();
 
 // ── Middleware ──
 app.use(cors({
